@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+   <head>     
+      <title>Photo Editor</title>
+      <link rel="stylesheet" type="text/css" href="styles.css">  
+      <link rel="icon" href="favicon.png" type="image/x-icon">
+  </head>
+   <body>
+
+      <h1>Photo Editor</h1>
+      <div class="dropdown-container">
+         <select onchange="location = this.value;">
+                 <option value="index.html">Home Page</option>
+                 <option value="entry1.html">Entry 1</option>
+                 <option value="entry2.html">Entry 2</option>
+                 <option value="entry3.html">Entry 3</option>
+                 <option value="entry4.html">Entry 4</option>
+                 <option value="entry5.html">Entry 5</option>
+                 <option value="entry6.html">Entry 6</option>
+                 <option value="entry7.html">Entry 7</option>
+                 <option value="entry8.html">Entry 8</option>
+                 <option value="entry9.html">Entry 9</option>
+                 <option value="entry10.html">Entry 10</option>
+                 <option value="entry11.html">Entry 11</option>
+             </select>
+         </div> 
+ 
+      
+      <input type="file" id="imageInput">
+      
+      <img id="myImage">
+      
+      <div id="controls">
+      
+         <button onclick="restoreOriginal()">Original</button>
+
+         <button onclick="makeBlackAndWhite()">Black & White</button>
+      
+         <button onclick="applyVintageEffect()">Vintage</button>
+         
+         <button onclick="applyGrainEffect()">Grain</button>
+
+         <button onclick="applySharpenEffect()">Sharpen</button>
+         
+         <br>
+         <button onclick="applyXrayEffect()">X-Ray</button>
+
+         <button onclick="increaseBrightness()">Brightness </button> <input type="range" id="brightnessSlider" min="0" max="200" value="100">
+      
+         <!-- <button onclick="decreaseBrightness()">Brightness -</button> -->
+         
+         <br>
+         
+         <button onclick="toggleColorBalance()">Toggle Color Balance</button>
+<div id="colorBalance" hidden>   
+   <label for="redRange">Red</label>
+   <input id="redRange" type="range" min=-100 max=100 value=0>
+
+   <label for="greenRange">Green</label>
+   <input id="greenRange" type="range" min=-100 max=100 value=0>   
+
+   <label for="blueRange">Blue</label>
+   <input id="blueRange" type="range" min=-100 max=100 value=0>
+</div> 
+
+<br>
+
+<label for="curve">Curves</label>   
+<input id="curve" type="range" min=1 max=3 value=1 step=0.1>
+
+      <br>
+
+      <button onclick="downloadImage()">Download Image</button>
+
+      </div>
+      
+      
+      <script src="script.js"></script>
+
+   </body>
+</html>
