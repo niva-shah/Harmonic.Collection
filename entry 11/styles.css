@@ -1,0 +1,29 @@
+#controls {
+  width: 500px;     
+  padding: 20px;
+  background: #ddd;
+  border: 1px solid #999;
+  margin-top: 10px;   
+}
+
+/* Styles for Buttons and Slider */
+
+button {
+ padding: 10px;
+ margin: 0 10px 10px 0;  
+ background: #eee;
+ border: 1px solid #aaa;
+ cursor: pointer; 
+}
+
+#brightnessSlider {
+ width: 200px;
+}
+
+/* Styles for Image */
+
+img {
+ max-width: 500px;
+ border: 1px solid #ccc;   
+ margin-top: 10px;
+}
