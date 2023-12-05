@@ -1,12 +1,13 @@
-#controls {
+/*#controls {
   width: 500px;     
   padding: 20px;
   background: #ddd;
   border: 1px solid #999;
-  margin-top: 10px;   
+  margin-top: 10px; 
+  margin-left: auto; 
+  margin-right: auto; 
+  text-align: center;  
 }
-
-/* Styles for Buttons and Slider */
 
 button {
  padding: 10px;
@@ -19,11 +20,67 @@ button {
 #brightnessSlider {
  width: 200px;
 }
-
-/* Styles for Image */
-
 img {
  max-width: 500px;
  border: 1px solid #ccc;   
  margin-top: 10px;
+}*/
+
+/* Styles for Image */
+
+/* Styles for Image Input and Text */
+h1 {
+  text-align: center; /* Center the heading text */
+}
+
+/* Styles for Image Input */
+input[type="file"] {
+  display: block;
+  margin: 20px auto 0;
+}
+
+/* Rest of your existing styles */
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto; /* Center the image horizontally */
+  border: 1px solid #ccc;
+  margin-top: 10px;
+}
+
+
+/* Styles for Buttons and Slider */
+button {
+  display: inline-block;
+  padding: 10px;
+  margin: 0 10px 10px 0;
+  background: #eee;
+  border: 1px solid #aaa;
+  cursor: pointer;
+}
+
+#brightnessSlider {
+  width: 200px;
+  display: block;
+  margin: 0 auto; /* Center the slider horizontally */
+}
+
+/* Styles for Effect Buttons Box */
+#controls {
+  width: 500px;
+  padding: 20px;
+  background: #ddd;
+  border: 1px solid #999;
+  margin-top: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+
+body {
+  background-color: #57fcbf5d; /* Set your desired background color */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
 }

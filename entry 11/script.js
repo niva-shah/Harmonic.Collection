@@ -34,8 +34,29 @@ function makeBlackAndWhite() {
   
   }
 
-// More effects...
+// Apply vintage effect
+function applyVintageEffect() {
+  // Add vintage effect to the image
+  img.style.filter = "sepia(100%) saturate(200%)";
+}
 
+// Apply pixelated effect
+function applyGrainEffect() {
+  // Add pixelated effect to the image
+  img.style.imageRendering = "pixelated";
+}
+
+// Apply sharpen effect
+function applySharpenEffect() {
+  // Add sharpen effect to the image
+  img.style.filter = "contrast(115%) brightness(95%)";
+}
+
+// Apply x-ray effect
+function applyXrayEffect() {
+  // Add x-ray effect to the image
+  img.style.filter = "brightness(140%) grayscale(100%) contrast(150%)";
+}
 // Download image 
 function downloadImage() {
   let imageURL = img.src;  
