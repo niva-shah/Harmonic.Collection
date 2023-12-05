@@ -1,0 +1,107 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .scene {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .cube {
+    width: 300px; /* Adjust width of the cube as needed */
+    height: 300px; /* Adjust height of the cube as needed */
+    position: relative;
+    transform-style: preserve-3d;
+    margin: 0 10px; /* Adjust margin between cubes as needed */
+    animation: rotate 5s infinite linear;
+  }
+  
+  .face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 2px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .face img {
+    width: 100%; /* Make the image fill the face of the cube */
+    height: 100%; /* Make the image fill the face of the cube */
+    object-fit: cover; /* Maintain aspect ratio and cover the entire face */
+  }
+  
+  /* Faces positioning for a 3D cube */
+  .front { transform: translateZ(50px); }
+  .back { transform: rotateY(180deg) translateZ(50px); }
+  .right { transform: rotateY(90deg) translateZ(50px); }
+  .left { transform: rotateY(-90deg) translateZ(50px); }
+  .top { transform: rotateX(90deg) translateZ(50px); }
+  .bottom { transform: rotateX(-90deg) translateZ(50px); }
+  
+  /* Animation for rotation */
+  @keyframes rotate {
+    from { transform: rotateY(0); }
+    to { transform: rotateY(360deg); }
+  }
+  
+
+
+
+  .dropdown-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 999; /* Ensure it's above other elements */
+}
+
+/* Dropdown styles */
+.dropdown-container select {
+    font-size: 16px;
+    padding: 8px;
+}
+
+/* Grid container styles */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    width: 800px;
+    margin: 20px auto;
+    position: relative; /* Ensure relative positioning for absolute children */
+}
+
+/* Box styles */
+.box {
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+    cursor: pointer;
+    transition: transform 0.2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+        width: 90%; /* Adjusted width for smaller screens */
+    }
+    
+    .box {
+        width: calc(50% - 10px); /* Adjusted box width for smaller screens */
+        height: 150px; /* Adjusted box height for smaller screens */
+    }
+}
+
+
