@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Booth</title>
+    <link rel="stylesheet" href="styles4.css">
+</head>
+<body>
+    <div class="container">
+        <div class="background"></div>
+    <div class="photobooth">
+        <h1>PHOTOBOOTH</h1>
+        <div class="info-box">
+            <p>1 for $click</p>
+        </div>
+
+        <div class="adjust-box">
+            <p>ADJUST</p>
+            <p>SEAT</p>
+            <p>TO</p>
+            <p>EYE LEVEL</p>
+        </div>
+ 
+        <div id="camera-container" style="float: center;">
+            <video id="camera-screen" autoplay></video>
+            <canvas id="captured-image"></canvas>
+        </div>
+        
+        <button id="capture-button">Capture</button>
+    </div>
+    <script src="script4.js"></script>
+</body>
+</html>
