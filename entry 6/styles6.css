@@ -1,0 +1,130 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5deb3; /* Light Brown */
+  }
+  h1
+{
+    margin-top: 20px;
+    text-align: center;
+    color: rgb(127, 60, 21);
+}
+.workspace-container {
+    display: flex;
+    background-color: #f5deb3;
+    align-items: center;
+    justify-content: space-around; /* Space items horizontally */
+}
+
+  
+  .stickers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .sticker {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+  }
+  
+  .canvas-container {
+    position: relative;
+    text-align: center;
+    align-items: center;
+    flex-grow: 1; /* Occupy remaining space */
+}
+
+
+/* New CSS for input container */
+.input-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding: 0 20px;
+}
+
+/* Adjust input style */
+.input-container input[type="file"],
+.text-box {
+    margin-right: 10px;
+}
+
+  
+  canvas {
+    border: 1px solid #d2b48c; /* Light Brown */
+    display: block;
+    margin: 20px;
+    background-color: #a5632ac4; /* Brown */
+    position: relative; /* Necessary for centering the text */
+    align-items: center;
+  }
+  
+  .workspace-text {
+    position: absolute;
+    top: 50%; /* Position the text in the vertical center */
+    left: 50%; /* Position the text in the horizontal center */
+    transform: translate(-50%, -50%); /* Centering trick */
+    color: rgba(102, 63, 39, 0.7); /* Opacity 70% */
+    margin: 0;
+    font-size: 24px;
+    display: none; /* Initially hide the text */
+  }
+
+
+
+.dropdown-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 999; /* Ensure it's above other elements */
+}
+
+/* Dropdown styles */
+.dropdown-container select {
+    font-size: 16px;
+    padding: 8px;
+}
+
+/* Grid container styles */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    width: 800px;
+    margin: 20px auto;
+    position: relative; /* Ensure relative positioning for absolute children */
+}
+
+/* Box styles */
+.box {
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+    cursor: pointer;
+    transition: transform 0.2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+        width: 90%; /* Adjusted width for smaller screens */
+    }
+    
+    .box {
+        width: calc(50% - 10px); /* Adjusted box width for smaller screens */
+        height: 150px; /* Adjusted box height for smaller screens */
+    }
+}
+
+
