@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="style1.css">
+  <title>ShotsByOrion</title>
+  <div class="dropdown-container">
+    <select onchange="location = this.value;">
+            <option value="index.html">Home Page</option>
+            <option value="entry1.html">Entry 1</option>
+            <option value="entry2.html">Entry 2</option>
+            <option value="entry3.html">Entry 3</option>
+            <option value="entry4.html">Entry 4</option>
+            <option value="entry5.html">Entry 5</option>
+            <option value="entry6.html">Entry 6</option>
+            <option value="entry7.html">Entry 7</option>
+            <option value="entry8.html">Entry 8</option>
+            <option value="entry9.html">Entry 9</option>
+            <option value="entry10.html">Entry 10</option>
+            <option value="entry11.html">Entry 11</option>
+        </select>
+    </div> 
+    
+  <style>
+    body {
+      background-image: url('e1bg.jpg'); 
+      text-align: center;
+      font-family: 'Arial', sans-serif;
+      background-size: cover;
+    background-position: center;
+    }
+    
+    h1 {
+      font-size: 48px;
+      color: #2e528f;
+      margin-top: 100px;
+    }
+    
+    .constellation {
+      display: flex;
+      justify-content: center;
+      margin-top: 50px;
+    }
+    
+    .constellation img {
+      width: 200px;
+      height: 300px;
+      margin: 0 20px;
+      animation: twinkle 5s infinite alternate;
+    }
+
+    .constellation::after {
+  content: "Orion is a celebrated photographer renowned for his captivating celebrity portraits and iconic images captured on traditional film. In an age dominated by digital technology, Orion's work stands out for its ability to infuse a timeless quality into his subjects, allowing their true essence to shine through. I had the incredible opportunity to meet Orion at his debut photography exhibition, where his artistry and genuine passion for his craft were on full display. What made the experience even more special was when i got to take portraits of him and capture his essence, just as he does with his subjects in front of a camera.";
+  position: absolute;
+  bottom: 35px;
+  left: 50%; 
+  transform: translateX(-50%); 
+  width: 50%; 
+  background:#2e528f(0.8, 0.8, 0.8, 0.8); 
+  color:  #1b3156; 
+  padding: 10px;
+  box-sizing: border-box;
+  border: 2px solid #2e528f; 
+  backdrop-filter: blur(40px); 
+}
+
+    @keyframes twinkle {
+      0% { opacity: 0.7; transform: scale(1); }
+      100% { opacity: 1; transform: scale(1.1); }
+    }
+  </style>
+</head>
+
+<body>
+  <h1>ShotsByOrion</h1>
+
+  <div class="constellation">
+    <img src="O1.jpg" alt="Orion Constellation" style="animation-direction: normal;">
+    <img src="O2.jpg" alt="Orion Constellation" style="animation-direction: reverse;">
+    <img src="O3.jpg" alt="Orion Constellation" style="animation-direction: normal;">
+  </div>
+</body>
+</html>

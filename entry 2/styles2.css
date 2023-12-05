@@ -1,0 +1,95 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-image: url('eb2.png');
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed;
+}
+
+.dropdown-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 999; /* Ensure it's above other elements */
+}
+
+/* Dropdown styles */
+.dropdown-container select {
+    font-size: 16px;
+    padding: 8px;
+}
+
+/* Grid container styles */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    width: 800px;
+    margin: 20px auto;
+    position: relative; /* Ensure relative positioning for absolute children */
+}
+
+/* Box styles */
+.box {
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+    cursor: pointer;
+    transition: transform 0.2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+        width: 90%; /* Adjusted width for smaller screens */
+    }
+    
+    .box {
+        width: calc(50% - 10px); /* Adjusted box width for smaller screens */
+        height: 150px; /* Adjusted box height for smaller screens */
+    }
+}
+
+
+
+
+.puzzle-container {
+    display: grid;
+    grid-template-columns: repeat(3, 150px);
+    grid-gap: 5px;
+    margin: 20px auto;
+    width: 500px;
+}
+
+.puzzle-piece {
+    width: 150px;
+    height: 150px;
+    background-size: 100% 100%; /* Adjust the background size to fit the piece */
+    cursor: pointer;
+}
+
+#piece-1 { background-image: url('1.png'); background-position: 0 0; }
+#piece-2 { background-image: url('2.png'); background-position: -150px 0; }
+#piece-3 { background-image: url('3.png'); background-position: -300px 0; }
+#piece-4 { background-image: url('4.png'); background-position: 0 -150px; }
+#piece-5 { background-image: url('5.png'); background-position: -150px -150px; }
+#piece-6 { background-image: url('6.png'); background-position: -300px -150px; }
+#piece-7 { background-image: url('7.png'); background-position: 0 -300px; }
+#piece-8 { background-image: url('8.png'); background-position: -150px -300px; }
+#piece-9 { background-image: url('9.png'); background-position: -300px -300px; }
+
+button#shuffle-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #000000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
